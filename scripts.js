@@ -1,44 +1,22 @@
-//function is a reusable peace of code that does specific thing
 
-//without return
-function addNumbers(num1,num2){
-    var ans = num1 + num2;
-    console.log('Addition : ' + ans);
-}
+//- function exprestions
+var profesions = function(firstName,job){
 
-//with return
-function subNumbers(num1,num2){
-  
-    return num1 - num2;
-   
-}
+    switch(job.toLocaleLowerCase()){
+        case 'doctor' :
+            return firstName + ' is a Doctor'
+        case 'singer' :
+            return firstName + ' is a Singer'
+        default :
+            return firstName + ' is doing something else'
+    }
 
-//invoke function
-
-addNumbers(5,6);
-var sub = subNumbers(10,5);
-
-console.log('Subtraction : ' + sub);
-
-
-
-//............................................
-
-//Define
-function calculateAge(birthYear){
-    return 2022 - birthYear;
 }
 
 //invoke
-console.log("Your age is : " + calculateAge(1998) + " Years old." );
+console.log(profesions('ishanka','Doctor'));
+console.log(profesions('Kamal','singer'));
+console.log(profesions('Lalith','saa'));
 
-function retimentyear(fisrtName,birthYear){
-    var age = calculateAge(birthYear);
-    var retire = 60 - age;
 
-    console.log(fisrtName + " retire in " + retire + " year in " + (birthYear + age + retire)  );
 
-}
-
-//invoke 
-retimentyear('ishanka',1964);
