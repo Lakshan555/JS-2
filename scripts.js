@@ -1,78 +1,36 @@
 //object
 
-var nimal = {
-    fisrtName : 'Nimal',
-    lastName : "Perera",
-    age : 25,
-    subjects: ["Java","Mern"],
-    degree:{
-        name:'software engineer',
-        duration:'4years'
-    },
-    projects:[
-        {
-            name:'E-COmmercce APP',
-            technology :'flutter',
-            version: 2.0
-        },
-        {
-            name:'Music Player',
-            technology :'java',
-            version: 12.0
-        },
-    ],
-    yearOfBirth : function(year){
-        return year - this.age;
-    }
-}
-
-console.log(nimal);
-console.log(nimal.fisrtName);
-console.log(nimal['lastName']);
-var x = 'age';
-console.log(nimal[x]);
-
-//get array
-console.log(nimal.subjects);
-console.log(nimal["subjects"]);
-
-console.log(nimal.subjects[0]);
-console.log(nimal["subjects"][0]);
-
-//get dgree object
-console.log(nimal.degree)
-console.log(nimal.degree.name)
-console.log(nimal.degree["name"])
-
-//get project
-console.log(nimal.projects)
-console.log(nimal.projects[0])
-
-console.log(nimal.projects[0].technology)
-console.log(nimal.projects[0]['technology'])
-
-//funtcion
-console.log("Year of Birth " + nimal.yearOfBirth(2022));
-
-//modify values
-nimal.age = 52
-
-console.log(nimal.age);
-
-//other way to crete object 
 var kasun = new Object();
+var chamal = new Object();
 
-kasun.name = 'kasun';
-kasun.age = 24;
+kasun.fullName = prompt("Enter Kamal full Name:");
+kasun.mass = prompt("Enter Kamal Mass:");
+kasun.hight = prompt("Enter Kamal Hight:");
 
-kasun.degree ={
-    name:'SE',
-    year:'3 year'
+chamal.fullName = prompt("Enter Chamal full Name:");
+chamal.mass = prompt("Enter Chamal Mass:");
+chamal.hight = prompt("Enter Chamal Hight:");
+
+kasun.bmi = chamal.bmi = function(){
+    this.bmiVal = this.mass / (this.hight ** 2);
+    return this.bmiVal;
 }
 
-kasun.yearOfBirth = {
-    function(year){
-        return year - this.age;
-    }
+
+console.log(kasun);
+console.log(chamal);
+
+
+if (kasun.bmi() > chamal.bmi()){
+    alert( kasun.fullName +  " has Higest BMI:" + kasun.bmiVal);
 }
-console.log(kasun.degree.name);
+else if(kasun.bmi() < chamal.bmi()){
+    alert( chamal.fullName +  " has Higest BMI:" + chamal.bmiVal);
+}
+else{
+    alert( "Both BMI are equal!");
+}
+console.log(kasun);
+console.log(chamal);
+
+
