@@ -1,28 +1,78 @@
-var tips = [];
-var amount = [];
+//object
 
-function bilCalulator(bill){
-    var tip;
-    if(bill < 1000){
-        tip = bill * 20 /100;
+var nimal = {
+    fisrtName : 'Nimal',
+    lastName : "Perera",
+    age : 25,
+    subjects: ["Java","Mern"],
+    degree:{
+        name:'software engineer',
+        duration:'4years'
+    },
+    projects:[
+        {
+            name:'E-COmmercce APP',
+            technology :'flutter',
+            version: 2.0
+        },
+        {
+            name:'Music Player',
+            technology :'java',
+            version: 12.0
+        },
+    ],
+    yearOfBirth : function(year){
+        return year - this.age;
     }
-    else if(bill >= 1000 && bill <= 1500){
-        tip = bill * 15 /100;
-    }
-    else{
-        tip = bill * 10 /100;
-    }
-
-    tips.push(tip);
-    amount.push(bill + tip);
-   
-    return tip;
 }
 
-console.log("1 - TIP:" + bilCalulator(1230) )
-console.log("2 - TIP:" + bilCalulator(982) )
-console.log("3 - TIP:" + bilCalulator(1640) )
+console.log(nimal);
+console.log(nimal.fisrtName);
+console.log(nimal['lastName']);
+var x = 'age';
+console.log(nimal[x]);
 
-console.log(tips)
-console.log(amount)
+//get array
+console.log(nimal.subjects);
+console.log(nimal["subjects"]);
 
+console.log(nimal.subjects[0]);
+console.log(nimal["subjects"][0]);
+
+//get dgree object
+console.log(nimal.degree)
+console.log(nimal.degree.name)
+console.log(nimal.degree["name"])
+
+//get project
+console.log(nimal.projects)
+console.log(nimal.projects[0])
+
+console.log(nimal.projects[0].technology)
+console.log(nimal.projects[0]['technology'])
+
+//funtcion
+console.log("Year of Birth " + nimal.yearOfBirth(2022));
+
+//modify values
+nimal.age = 52
+
+console.log(nimal.age);
+
+//other way to crete object 
+var kasun = new Object();
+
+kasun.name = 'kasun';
+kasun.age = 24;
+
+kasun.degree ={
+    name:'SE',
+    year:'3 year'
+}
+
+kasun.yearOfBirth = {
+    function(year){
+        return year - this.age;
+    }
+}
+console.log(kasun.degree.name);
