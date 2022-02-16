@@ -1,22 +1,35 @@
+//bill,tip,amount
 
-//Local variable
+var billPay = {
+    bill:[],
+    tip:[],
+    final:[],
+    calTip:function(){
+        
+        for(i=0;i<this.bill.length;i++){
+            var tp;
+            if(this.bill[i] <= 1000){
+                tp =  this.bill[i] *  20/100
+            }
+            else if(this.bill[i] < 1000 &&  this.bill[i] >= 1500 ) {
+                tp =   this.bill[i] *   15/100
+            }
+            else {
+                tp =  this.bill[i] *  10/100
+            }
 
-function addNum(){
-    var a = 20;
-    var b = 10;
+            this.tip[i] =tp;
+            this.final[i]=  this.bill[i] + tp;
 
-    console.log(a+b);
+        }
+    }
+
 }
 
-
-//Golbal variabale
-
-var c = 20;
-function showsum(){
-
-    console.log(c);
-     c = 30;
+for(i=0; i < 5 ; i++){
+    billPay.bill[i] = parseInt(prompt("Enter " +(i+1) + " bill value:"));
 }
 
-showsum();
-showsum();
+billPay.calTip();
+console.log(billPay);
+
