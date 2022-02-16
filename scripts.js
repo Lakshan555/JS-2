@@ -1,78 +1,56 @@
-//object
+ for(var i = 5 ; i >= 0 ; i--){
+     console.log(i);
+ }
 
-var nimal = {
-    fisrtName : 'Nimal',
-    lastName : "Perera",
-    age : 25,
-    subjects: ["Java","Mern"],
-    degree:{
-        name:'software engineer',
-        duration:'4years'
-    },
-    projects:[
-        {
-            name:'E-COmmercce APP',
-            technology :'flutter',
-            version: 2.0
-        },
-        {
-            name:'Music Player',
-            technology :'java',
-            version: 12.0
-        },
-    ],
-    yearOfBirth : function(year){
-        return year - this.age;
-    }
+ //itarete an array
+ var student = ["ishanka ", "pramidu","Lakshan"];
+
+ for(var i = 0 ; i < student.length ; i++){
+    console.log(student[i]);
+ }
+
+ //for In loop
+
+ var person = {frame:"ishanka",lname:'Pramidu',age:24}
+
+ for(var i in person){
+     console.log(person[i]);
+ }
+
+ //for of looop
+var fullName = "Ishanka"
+
+for(var j of fullName){
+    console.log(j);
 }
 
-console.log(nimal);
-console.log(nimal.fisrtName);
-console.log(nimal['lastName']);
-var x = 'age';
-console.log(nimal[x]);
-
-//get array
-console.log(nimal.subjects);
-console.log(nimal["subjects"]);
-
-console.log(nimal.subjects[0]);
-console.log(nimal["subjects"][0]);
-
-//get dgree object
-console.log(nimal.degree)
-console.log(nimal.degree.name)
-console.log(nimal.degree["name"])
-
-//get project
-console.log(nimal.projects)
-console.log(nimal.projects[0])
-
-console.log(nimal.projects[0].technology)
-console.log(nimal.projects[0]['technology'])
-
-//funtcion
-console.log("Year of Birth " + nimal.yearOfBirth(2022));
-
-//modify values
-nimal.age = 52
-
-console.log(nimal.age);
-
-//other way to crete object 
-var kasun = new Object();
-
-kasun.name = 'kasun';
-kasun.age = 24;
-
-kasun.degree ={
-    name:'SE',
-    year:'3 year'
+//While looop
+var marks =[33,55,66,88,66,99]
+var k = 0;
+while(k < marks.length){
+    console.log(marks[k]);
+    k++;
 }
 
-kasun.yearOfBirth = {
-    function(year){
-        return year - this.age;
-    }
+//do while loop
+var l = 10;
+do{
+    console.log(l);
+    l--;
+}while(l >= 0);
+
+// // continue and break
+
+var data = ["ishanka","Kaduwela",1996,"math",true,"chocolate"];
+
+//continue
+for(var p=0 ; p<data.length ;p++){
+    if(typeof(data[p]) !== 'string')continue;
+    console.log(data[p]);
 }
-console.log(kasun.degree.name);
+
+//break
+for(var p=0 ; p<data.length ;p++){
+    if(typeof(data[p]) !== 'string')break;
+    console.log(data[p]);
+}
