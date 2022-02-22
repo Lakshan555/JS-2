@@ -65,14 +65,17 @@ var kasun = new Object();
 kasun.name = 'kasun';
 kasun.age = 24;
 
+kasun.arr = ['hello',true]
+
 kasun.degree ={
     name:'SE',
     year:'3 year'
 }
 
-kasun.yearOfBirth = {
-    function(year){
-        return year - this.age;
+kasun.yearOfBirth = function(year){
+        return 2022 - year ;
     }
-}
-console.log(kasun.degree.name);
+
+console.log(kasun.degree);
+console.log(kasun.arr);
+console.log(kasun.yearOfBirth(1998));
